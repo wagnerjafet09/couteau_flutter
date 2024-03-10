@@ -4,6 +4,8 @@ import 'dart:convert';
 import '../clases.dart';
 
 class WeatherPage extends StatefulWidget {
+  const WeatherPage({super.key});
+
   @override
   _WeatherPageState createState() => _WeatherPageState();
 }
@@ -31,7 +33,7 @@ class _WeatherPageState extends State<WeatherPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
-        title: Text('Clima'),
+        title: const Text('Clima'),
       ),
       body: Center(
         child: weather != null
@@ -40,16 +42,17 @@ class _WeatherPageState extends State<WeatherPage> {
                 children: [
                   Text(
                     'Clima en ${weather.cityName}',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Text(
                     '${weather.temperature.toStringAsFixed(1)}°C',
-                    style: TextStyle(fontSize: 30),
+                    style: const TextStyle(fontSize: 30),
                   ),
                 ],
               )
-            : CircularProgressIndicator(),
+            : const CircularProgressIndicator(),
       ),
     );
   }

@@ -3,6 +3,8 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class AgePredictionPage extends StatefulWidget {
+  const AgePredictionPage({super.key});
+
   @override
   _AgePredictionPageState createState() => _AgePredictionPageState();
 }
@@ -16,7 +18,7 @@ class _AgePredictionPageState extends State<AgePredictionPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
-        title: Text('Predecir Edad'),
+        title: const Text('Predecir Edad'),
       ),
       body: Center(
         child: ListView(
@@ -58,11 +60,6 @@ class _AgePredictionPageState extends State<AgePredictionPage> {
                   if (age < 18)
                     Column(
                       children: [
-                        // Image.asset(
-                        //   'assets/young.jpg',
-                        //   width: 100,
-                        //   height: 100,
-                        // ),
                         Image(image: AssetImage('assets/joven.jpg')),
                       ],
                     ),

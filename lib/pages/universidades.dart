@@ -5,6 +5,8 @@ import 'dart:convert';
 import '../clases.dart';
 
 class UniversitiesPage extends StatefulWidget {
+  const UniversitiesPage({super.key});
+
   @override
   _UniversitiesPageState createState() => _UniversitiesPageState();
 }
@@ -30,14 +32,14 @@ class _UniversitiesPageState extends State<UniversitiesPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
-        title: Text('Universidades'),
+        title: const Text('Universidades'),
       ),
       body: Column(
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: 'Nombre del país',
               ),
@@ -74,7 +76,7 @@ class _UniversitiesPageState extends State<UniversitiesPage> {
       floatingActionButton: FloatingActionButton(
         onPressed: fetchData,
         tooltip: 'Buscar Universidades',
-        child: Icon(Icons.search),
+        child: const Icon(Icons.search),
       ),
     );
   }

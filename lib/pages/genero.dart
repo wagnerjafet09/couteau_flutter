@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import '../clases.dart';
 
 class GeneroPage extends StatefulWidget {
+  const GeneroPage({super.key});
+
   @override
   _GeneroPageState createState() => _GeneroPageState();
 }
@@ -27,7 +28,7 @@ class _GeneroPageState extends State<GeneroPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
-        title: Text('Predecir Género'),
+        title: const Text('Predecir Género'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -35,7 +36,7 @@ class _GeneroPageState extends State<GeneroPage> {
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: TextField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: 'Nombre',
               ),
@@ -47,18 +48,18 @@ class _GeneroPageState extends State<GeneroPage> {
               },
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           gender == 'male'
               ? Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       'Hombre',
                       style: TextStyle(fontSize: 20),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     Container(
@@ -73,11 +74,11 @@ class _GeneroPageState extends State<GeneroPage> {
               : Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       'Mujer',
                       style: TextStyle(fontSize: 20),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     Container(

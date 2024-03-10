@@ -5,6 +5,8 @@ import 'package:url_launcher/url_launcher.dart';
 import '../clases.dart';
 
 class NewsPage extends StatefulWidget {
+  const NewsPage({super.key});
+
   @override
   _NewsPageState createState() => _NewsPageState();
 }
@@ -36,7 +38,7 @@ class _NewsPageState extends State<NewsPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
-        title: Text('Posts'),
+        title: const Text('Posts'),
       ),
       body: ListView.builder(
         itemCount: posts.length,
